@@ -1,3 +1,19 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">coffeeorder</string>
+    <string name="NameHint">Name</string>
+    <string name="toppings">toppings</string>
+    <string name="WhippedCream">Whipped Cream</string>
+    <string name="Chocolate">Chocolate</string>
+    <string name="quantity">quantity</string>
+    <string name="decrement">-</string>
+    <string name="increment">+</string>
+    <string name="orderInitialValue">2</string>
+    <string name="orderSummary">order summary</string>
+    <string name="order">order</string>
+    <string name="guestName">Name:<xliff:g id="Name" example="Julie">%s</xliff:g></string>
+    <string name="orderSummaryCream">Add whipped cream?<xliff:g id="Add whipped cream?" example="TRUE">%b</xliff:g></string>
+    <string name="orderSummaryChocolate">Add chocolate?<xliff:g id="add_chocolate" example="TRUE">%b</xliff:g></string>
+    <string name="orderSummaryQuantity">Total Quantity:<xliff:g id="quantity" example="2">%d</xliff:g></string>
+    <string name="orderTotalPrice">Total:<xliff:g id="price" example="$10">%s</xliff:g></string>
+    <string name="thank">"Thank you!!!</string>
 </resources>

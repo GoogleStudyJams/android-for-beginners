@@ -10,20 +10,20 @@
         android:id = "@+id/Name_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint = "Name"/>
+        android:hint = "@string/NameHint"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
-        android:text="toppings"
+        android:text= "@string/toppings"
         android:textAllCaps="true" />
 
     <CheckBox
         android:id = "@+id/is_whipped_cream"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text = "Whipped Cream"
+        android:text = "@string/WhippedCream"
         android:textSize = "16sp"
         android:paddingLeft = "24dp"/>
 
@@ -31,7 +31,7 @@
         android:id = "@+id/is_chocolate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text = "Chocolate"
+        android:text = "@string/Chocolate"
         android:textSize = "16sp"
         android:paddingLeft = "24dp"/>
 
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:text="quantity"
+        android:text="@string/quantity"
         android:textAllCaps="true" />
 
     <LinearLayout
@@ -52,7 +52,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="decrement"
-            android:text="-" />
+            android:text="@string/decrement" />
 
         <TextView
             android:id="@+id/quantity_text_view"
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:text="2"
+            android:text="@string/orderInitialValue"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
 
@@ -68,7 +68,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="increment"
-            android:text="+" />
+            android:text="@string/increment" />
 
     </LinearLayout>
 
@@ -77,14 +77,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginTop="16dp"
-        android:text="order summary"
+        android:text="@string/orderSummary"
         android:textAllCaps="true" />
 
     <TextView
         android:id="@+id/order_summary_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
+        android:text =""
         android:textColor="@android:color/black"
         android:textSize="16sp" />
 
@@ -93,6 +93,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:onClick="submitOrder"
-        android:text="order" />
+        android:text="@string/order" />
 
 </LinearLayout>

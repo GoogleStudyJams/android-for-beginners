@@ -1,5 +1,6 @@
 package com.example.lotus.coffeeorder;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -48,16 +49,24 @@ public class MainActivity extends AppCompatActivity {
         int totalPrice = orderPrice(is_whippedCream,is_chocolate);
         EditText nameField = (EditText) findViewById(R.id.Name_field);
         String name = nameField.getText().toString();
-        displayMessage(orderSummary(name,is_whippedCream,is_chocolate,totalPrice));
+        if(name.isEmpty()){
+            Toast.makeText(getApplicationContext(), "Please input your name, Thanks!",Toast.LENGTH_LONG).show();
+        }else{
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/html");
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Coffee Order");
+            intent.putExtra(Intent.EXTRA_TEXT, orderSummary(name,is_whippedCream,is_chocolate,totalPrice));
+            startActivity(Intent.createChooser(intent, "Send Email"));
+        }
     }
 
     private String orderSummary(String Name, Boolean is_whippedCream, Boolean is_chocolate, int totalPrice){
-        String message = "Name: "+Name;
-        message += "\nAdd whipped cream? " + is_whippedCream;
-        message += "\nAdd chocolate? " + is_chocolate;
-        message += "\nQuantity:"+quantity;
-        message += "\nPrice: "+totalPrice;
-        message += "\nThank you!!";
+        String message = getString(R.string.guestName,Name);
+        message += "\n" + getString(R.string.orderSummaryCream,is_chocolate);
+        message += "\n" + getString(R.string.orderSummaryChocolate,is_chocolate);
+        message += "\n"+ getString(R.string.orderSummaryQuantity,quantity);
+        message += "\n"+ getString(R.string.orderTotalPrice,NumberFormat.getCurrencyInstance().format(totalPrice));
+        message += "\n"+ getString(R.string.thank);
         return(message);
     }
 
