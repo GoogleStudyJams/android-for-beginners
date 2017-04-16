@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mijack.courtcounter.MainActivity">
+
+    <Button
+        android:id="@+id/btnReset"
+        style="@style/btnStyle"
+        android:layout_marginBottom="32dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="#1c000000"
+        app:layout_constraintBottom_toBottomOf="@+id/aFreeThrow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/teamA"
+        style="@style/AStyle"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Team A"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/teamAPoint"
+        style="@style/AStyle"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="0"
+        android:textSize="56sp"
+        app:layout_constraintTop_toBottomOf="@+id/teamA" />
+
+    <Button
+        android:id="@+id/addA3Point"
+        style="@style/AStyle"
+        android:layout_marginTop="16dp"
+        android:text="+3 Point"
+        app:layout_constraintTop_toBottomOf="@id/teamAPoint" />
+
+    <Button
+        android:id="@+id/addA2Point"
+        style="@style/AStyle"
+        android:layout_marginTop="16dp"
+        android:text="+2 Point"
+        app:layout_constraintTop_toBottomOf="@id/addA3Point" />
+
+    <Button
+        android:id="@+id/aFreeThrow"
+        style="@style/AStyle"
+        android:layout_marginTop="16dp"
+        android:text="Free Throw"
+        app:layout_constraintTop_toBottomOf="@id/addA2Point" />
+
+    <TextView
+        android:id="@+id/teamB"
+        style="@style/BStyle"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Team B"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/teamBPoint"
+        style="@style/BStyle"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="0"
+        android:textSize="56sp"
+        app:layout_constraintTop_toBottomOf="@+id/teamB" />
+
+    <Button
+        android:id="@+id/addB3Point"
+        style="@style/BStyle"
+        android:layout_marginTop="16dp"
+        android:text="+3 Point"
+        app:layout_constraintTop_toBottomOf="@id/teamBPoint" />
+
+    <Button
+        android:id="@+id/addB2Point"
+        style="@style/BStyle"
+        android:layout_marginTop="16dp"
+        android:text="+2 Point"
+        app:layout_constraintTop_toBottomOf="@id/addB3Point" />
+
+    <Button
+        android:id="@+id/bFreeThrow"
+        style="@style/BStyle"
+        android:layout_marginTop="16dp"
+        android:text="Free Throw"
+        app:layout_constraintTop_toBottomOf="@id/addA2Point" />
+</android.support.constraint.ConstraintLayout>
