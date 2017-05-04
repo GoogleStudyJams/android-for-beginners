@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CoffeeDemo</string>
+    <string name="hint">Total:$ 5 \nTHANK YOU~</string>
+    <string name="hint2">Total:$ %d \nTHANK YOU~</string>
+    <string name="number_1">1</string>
+</resources>
